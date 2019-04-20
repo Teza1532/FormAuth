@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FormModels.Models
+namespace JotFormAuthenticator.Models
 {
     public class FormModel
     {
@@ -16,7 +16,6 @@ namespace FormModels.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime Updated { get; }
 
-        public ICollection<FieldModel> Fields { get; set; }
         public ICollection<FormSubmission> FormSubmissions { get; set; }
     }
 }

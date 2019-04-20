@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FormModels.Models;
-using JotFormParserModels.Models;
+using JotFormAuthenticator.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JotFormAuthenticator.Controllers

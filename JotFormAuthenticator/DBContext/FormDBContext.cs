@@ -1,17 +1,16 @@
-﻿using FormModels.Models;
+﻿using JotFormAuthenticator.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FormAuthenticator.DBContext
+namespace JotFormAuthenticator.DBContext
 {
     public class FormDBContext : DbContext
     {
         public FormDBContext(DbContextOptions<FormDBContext> options) : base(options) { }
         public DbSet<FormModel> FormModels { get; set; }
-        public DbSet<FieldModel> FieldModels { get; set; }
         public DbSet<FormSubmission> FormSubmissions { get; set; }
         public DbSet<SubmissionFieldValues> SubmissionFieldValues { get; set; }
 

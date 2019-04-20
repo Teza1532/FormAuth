@@ -4,14 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace FormModels.Models
+namespace JotFormAuthenticator.Models
 {
     public class SubmissionFieldValues
     {
         [Key]
         public int SubmissionFieldValuesID { get; set; }
-        [ForeignKey("FieldID")]
-        public FieldModel FieldModel { get; set; }
         [ForeignKey("FormSubmissionID")]
         public FormSubmission FormSubmission { get; set; }
         [Required]
