@@ -1,4 +1,5 @@
 ﻿using JotFormAuthenticator.DBContext;
+using JotFormAuthenticator.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,15 @@ namespace JotFormAuthenticator.Repository
     {
         private FormDBContext _context;
 
-        public void AddForm()
+        public FormRepository(FormDBContext FormDBContext)
         {
-            
+            _context = FormDBContext;
         }
 
-
-
+        public void AddForm(FormModel Form)
+        {
+            _context.Add(Form);
+            _context.SaveChanges();
+        }
     }
 }

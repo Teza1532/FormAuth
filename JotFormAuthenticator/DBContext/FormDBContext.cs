@@ -10,9 +10,8 @@ namespace JotFormAuthenticator.DBContext
     public class FormDBContext : DbContext
     {
         public FormDBContext(DbContextOptions<FormDBContext> options) : base(options) { }
-        public DbSet<FormModel> FormModels { get; set; }
-        public DbSet<FormSubmission> FormSubmissions { get; set; }
-        public DbSet<SubmissionFieldValues> SubmissionFieldValues { get; set; }
+        public DbSet<FormModel> Forms { get; set; }
+        public DbSet<FieldModel> Fields { get; set; }
 
 
         public override int SaveChanges()
