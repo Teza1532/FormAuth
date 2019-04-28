@@ -21,5 +21,10 @@ namespace JotFormAuthenticator.Repository
             _context.Add(Form);
             _context.SaveChanges();
         }
+
+        public List<FormModel> GetForms()
+        {
+            return _context.Forms.ToList();
+        }
     }
 }

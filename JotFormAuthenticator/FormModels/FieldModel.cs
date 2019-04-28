@@ -6,18 +6,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JotFormAuthenticator.Models
 {
-    public class FieldModel
+    public class FieldModel : EntityBase
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
         public int FieldID { get; set; }
-        public int FieldParentFieldID { get; set; }
+        public string FieldParentName{ get; set; }
         [Required]
         public string FieldName { get; set; }
         [Required]
         public string FieldValue { get; set; }
         [Required]
-        [ForeignKey("FormSubmission")]
-        public FormModel Form { get; set; }
+        public long SubmissionID { get; set; }
     }
 }

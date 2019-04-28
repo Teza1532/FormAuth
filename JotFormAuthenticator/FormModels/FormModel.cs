@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JotFormAuthenticator.Models
 {
-    public class FormModel
+    public class FormModel : EntityBase
     {
         [Key]
         public long FormID { get; set; }
